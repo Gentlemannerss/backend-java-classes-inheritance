@@ -3,12 +3,14 @@ public class Customer {
     public String lastName = "No last name";
     public Integer customerNumber;
     private CreditCard creditCard;
+    private ContactInfo contactInfo;
 
-    public Customer(String firstName, String lastName, Integer customerNumber, CreditCard creditCard) {
+    public Customer(String firstName, String lastName, Integer customerNumber, CreditCard creditCard, ContactInfo contactInfo) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.customerNumber = customerNumber;
     this.creditCard = creditCard;
+    this.contactInfo = contactInfo;
     }
 
     public Customer(String firstName) {
@@ -42,6 +44,26 @@ public class Customer {
     }
     public void setCustomerNumber(Integer customerNumber) {
         this.customerNumber = customerNumber;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public Integer getCustomerNumber() {
+        return customerNumber;
+    }
+
+    public ContactInfo getContactInfo() {
+        return contactInfo;
+    }
+
+    public void setContactInfo(ContactInfo contactInfo) {
+        this.contactInfo = contactInfo;
     }
 
     public CreditCard getCreditCard() {
